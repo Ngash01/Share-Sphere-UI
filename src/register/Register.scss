@@ -1,0 +1,60 @@
+.login{
+    width: 100vw;
+    height: 100vh;
+    background-color: #f0f2f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: calc(100vh - 70px);
+
+    .wrapper{
+        display: flex;
+        width: 70%;
+        height: 80%;
+        justify-content: space-between;
+
+        .left{
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+            padding: 20px;
+            gap: 2rem;
+            background-color: yellow;
+
+            .logo{
+                width: 10rem;
+                border-radius: 10px;
+            }
+
+            .loginDesc{
+                font-size: 18px;
+                font-weight: 600;
+            }
+
+        }
+
+        .right{
+            flex: 1;
+                background-color: greenyellow;
+                display: flex;
+                flex-direction: column;
+                // width: fit-content;
+                gap: 1em;
+                padding: 20px;
+
+                .inputField{
+                    display: flex;
+                    align-items: center;
+
+                    input{
+                        height: 2.5rem;
+                        border-radius: 5px;
+                        border: black 2px solid;
+                        margin-left: 1.8rem
+                    }
+                }
+            }
+        
+    }
+}
+

@@ -1,0 +1,39 @@
+*{
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+}
+
+.postCaption{
+  font-family: 'Shadows Into Light', cursive;
+  color: rgb(50, 48, 48);
+}
+
+.standardIcons{
+  font-size: 1.4rem;
+}
+
+button{
+  color: lightgray;
+  background-color: #231f20;
+  padding: 4px 1rem;
+  border-radius: 7px;
+  cursor: pointer;
+} 
+
+button:hover{
+  color: white;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

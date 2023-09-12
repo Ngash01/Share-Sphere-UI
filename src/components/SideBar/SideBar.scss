@@ -1,0 +1,73 @@
+.Sidebar{
+    flex: 3;   
+    height: calc(100vh - 70px);
+    overflow-y: scroll;
+    position: sticky;
+    top: 70px;
+    
+    
+    &::-webkit-scrollbar{
+        width: 5px;
+    }
+
+    &::-webkit-scrollbar-track{
+        background-color: #f1f1f1;
+    }
+
+    &::-webkit-scrollbar-thumb{
+        background-color: rgb(179, 179, 179);
+    }
+
+    .wrapper{
+        padding: 3px;
+        .SidebarList{ 
+            text-decoration: none;
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            
+            
+            .SideBarListItem{
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                cursor: pointer;
+                padding: 6px 8px ;
+                width: 8rem;
+                border-radius: 16px;
+
+                :nth-child(1){
+                    color: black;
+                    
+                }
+                :nth-child(2){
+                    font-size: 15px;
+                    cursor: pointer;
+                    color: rgb(66, 64, 64);
+                }
+
+                .avatarsidebar{
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+                
+            }
+
+            .SideBarListItem:hover{
+                background-color: gainsboro;
+            }
+
+        }
+
+        .SidebarList:nth-child(2)> .SideBarListItem{
+            width: 13rem;
+        }
+
+}
+
+}
+
+
