@@ -20,10 +20,6 @@ const Register = () => {
   const handleRegister = (e)=>{
     e.preventDefault()
 
-    if(password.current.value !== confirmPassword.current.value){
-        confirmPassword.current.setCustomValidity("Password mismatch!")
-    }else{
-
     RegisterCall({username:username.current.value, email:email.current.value,password:password.current.value,from:country.current.value, city:city.current.value},dispatch)
 
     username.current.value = ""
@@ -31,7 +27,7 @@ const Register = () => {
     password.current.value = ""
     country.current.value = ""
     city.current.value = ""
-}
+
   }
 
   return (
