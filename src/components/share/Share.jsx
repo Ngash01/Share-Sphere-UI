@@ -75,7 +75,7 @@ const Share = () => {
             <div className="top">
                 {userInfo?.profilePic ? 
                 (<img src={userInfo?.profilePic} alt="" className="shareProfileImg" />) : <BsPersonCircle style={{fontSize:"30px", cursor:"pointer"}}/> }
-                <input placeholder={`When sharing include both a caption and a photo...`} 
+                <input placeholder={`let's start by sharing something ${userInfo?.username}`} 
                 className="shareInput"  ref={desc} required/>
             </div>
             <hr className="shareHr" />
