@@ -47,7 +47,7 @@ const Post =  ({post}) => {
 
     const handleLike = ()=>{
         try{
-         axios.put(`http://localhost:5000/posts/like/${post._id}`, {userId: currentUser._id})
+         axios.put(`https://share-sphere.onrender.com/posts/like/${post._id}`, {userId: currentUser._id})
         //  console.log("id of the post we like", )
 
             setCount((current)=> like  ? current + 1 : current - 1)
@@ -79,7 +79,7 @@ const Post =  ({post}) => {
             <div className="center">
                 <p className='postCaption'>{post?.desc}</p>            
                     {post?.img.startsWith('http') ? <img src={post?.img} className='postImg' alt=""/> :
-                      <img src={`http://localhost:5000/Images/${post?.img}`} style={{objectPosition:"center top"}} className='postImg' alt="" /> 
+                      <img src={`https://share-sphere.onrender.com/Images/${post?.img}`} style={{objectPosition:"center top"}} className='postImg' alt="" /> 
                     }
             </div>
             
