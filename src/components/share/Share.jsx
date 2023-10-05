@@ -49,7 +49,7 @@ const Share = () => {
             img: imgUrl.data
         }
     
-        await axios.post("http://localhost:5000/posts/create", newPost)
+        await axios.post("https://share-sphere.onrender.com/posts/create", newPost)
         window.location.reload()
         }
         catch(err){
