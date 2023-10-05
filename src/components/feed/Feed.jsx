@@ -48,7 +48,7 @@ import { useNavigate } from 'react-router-dom';
   return (
     <div className='feed'>
         {username === user?.username &&  <Share/>}
-        {/* {isFetching && <h2>Fetching...</h2>} */}
+        {isFetching && <h2>Fetching...</h2>}
 
          {posts.map((post)=>{
           return <Post key={post._id} post={post} isLoading={isLoading}  />
