@@ -18,7 +18,7 @@ function App() {
       <Router>
       <TopBar/>
         <Routes>
-          <Route path='/' element={user ? <Home/> : <Register/>}/>
+          <Route path='/' element={user ? <FollowSuggestion/> : <Register/>}/>
           <Route path='/profile/:username' element={!user ? <Navigate to={"/register"}/> : <Profile/>}/>
           <Route path='/login' element={user ? <Navigate to={'/follow'}/> :  <Login/>}/>
           <Route path='/follow' element={user ? <FollowSuggestion/> : <Register/>}/>
