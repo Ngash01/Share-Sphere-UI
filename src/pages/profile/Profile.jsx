@@ -24,7 +24,7 @@ const Profile = () => {
     useEffect(()=>{
         if(paramsUser){
             const fetchedData = async()=>{
-                const res = await axios.get(`http://localhost:5000/users/one?username=${paramsUser}`)
+                const res = await axios.get(`https://share-sphere.onrender.com/users/one?username=${paramsUser}`)
                 setUser(res.data)
                 console.log("Quavo's data",res.data)
             }
