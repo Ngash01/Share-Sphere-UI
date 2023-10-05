@@ -1,11 +1,31 @@
-import React from 'react';
+import React, { createContext, useContext, useEffect, useState } from 'react';
 import "./TopBar.css";
 import {MdSearch} from "react-icons/md";
 import {IoMdPerson, IoMdNotifications} from "react-icons/io";
 import {BsChatLeftDotsFill} from "react-icons/bs";
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../context/AuthContext';
+import { RxAvatar } from "react-icons/rx"
+import {BiSolidDownArrow} from "react-icons/bi"
+import { LoginStart, Logout } from '../../context/AuthActions';
+import {AiOutlineSetting} from "react-icons/ai"
 
 const TopBar = () => {
+    const [showDropDown, setShowDropDown] = useState(false)
+
+    let {user, dispatch} = useContext(AuthContext)
+    console.log(user?.data)
+    
+    const handleDropDown = ()=>{
+        setShowDropDown((curr)=> curr ? false : true)
+    }
+
+    const handleLogout = (e)=>{
+        e.preventDefault()
+        dispatch(Logout())
+        setShowDropDown(false)
+    }
+
   return (
     <div className='Topbar'>
         <div className="topBarLeft">
@@ -35,8 +55,20 @@ const TopBar = () => {
                     <IoMdNotifications className='topBarIcon'/>
                     <span className='topBarItemIconBadge'>1</span>
                 </div>
+                
             </div>
-            <img src="/assets/mikhailportrait.jpeg" alt="" className="avatar" />
+            <div style={{marginleft:"6rem"}} onClick={handleDropDown}>
+                <AiOutlineSetting style={{cursor:"pointer", fontSize:"20px"}}/>
+            </div>
+            {/* <Link to={`/profile/${user?.data?.username}`}> */}
+            {user?.data?.profilePic ? (
+                <img src={user?.data?.profilePic} alt="" className="avatar" /> ) : <RxAvatar size={"40px"} style={{marginRight:"10px", cursor:"pointer", color:"white"}}/>
+            }
+            {/* </Link>  */}
+           {showDropDown && <div className='dropdown' style={{position:'absolute', borderRadius:"0.4rem", top:"4.9rem", right:"3.5rem", backgroundColor:"black", padding:"0.2rem 2rem"}}>
+                <p>Settings</p>
+                <p onClick={handleLogout}>Log out</p>
+            </div>}
         </div>
     </div>
   )

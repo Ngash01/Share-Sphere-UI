@@ -1,6 +1,10 @@
 .profile{
     display: flex;
 
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+
     .RightSide{
         flex: 9;
         display: flex;
@@ -22,13 +26,23 @@
             left: 0;
             margin: auto;
             width: fit-content;
+            align-items: center;
 
+            .profileInfoMore{
+                display: flex;
+                flex-direction: column;
+
+                .lastInfo{
+                    margin-top: -0.8rem;
+                }
+            }
 
             .userImg{
                 height: 10rem;
                 width: 10rem;
                 border-radius: 50%;
                 margin-left: 0.5rem;
+                object-fit: cover;
             }
 
             .profileInfoMore{
@@ -54,10 +68,13 @@
             padding: 20px;
 
             .userShareLeft{
-                flex: 1;
+                flex: 2;
             }
             .userShareRight{
                 flex: 1;
+                position: sticky;
+                top: 70px;
+                height: fit-content;
 
                 .location{
                     display: flex;
@@ -70,12 +87,19 @@
                     }
                 }
                 .userFriends{
-                    display: flex;
-                    gap: 2rem;
+                    display: grid;
+                    // flex-direction: row;
+                    grid-template-columns: auto auto auto;
+                    gap: 1rem;
+                    background-color: aqua;
+                    width: fit-content;
 
                     .userFriend{
                         display: flex;
                         flex-direction: column;
+                        // width: fit-content;
+                        padding: 1rem;
+                        // background-color: green;
 
                         .userFriendImg{
                             width: 100px;

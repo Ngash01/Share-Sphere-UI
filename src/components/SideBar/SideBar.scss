@@ -4,7 +4,10 @@
     overflow-y: scroll;
     position: sticky;
     top: 70px;
-    
+
+    @media screen and (max-width:1050px) {
+            display: none;
+    }
     
     &::-webkit-scrollbar{
         width: 5px;
@@ -69,5 +72,6 @@
 }
 
 }
+
 
 

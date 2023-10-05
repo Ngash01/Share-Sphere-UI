@@ -8,6 +8,7 @@
     position: sticky;
     top: 0;
     z-index: 99;
+    
 } 
 
 .logo{
@@ -60,6 +61,7 @@
     margin-left: 2rem;
 }
 
+
 .topBarLink{
     cursor: pointer;
 }
@@ -100,4 +102,58 @@
     object-fit: cover;
     margin-right: 1rem;
     cursor: pointer;
+}
+
+.dropdown{
+    :nth-child(1){
+        cursor: pointer;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+    :nth-child(2){
+        cursor: pointer;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .Topbar{
+        width: 100%;
+        background-color: #231f20;
+
+    }
+
+    .topBarRight{
+        display: none;
+    }
+
+    .topBarIcons{
+        display: none;
+    }
+
+    .topBarCenter{
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width:1220px) {
+    .topBarIcons{
+        display: none;
+    }
+}
+
+@media screen and (max-width:807px) {
+    .topBarLinks{
+        display: none;
+    }
+}
+
+@media screen and (max-width:430px) {
+    .dropdown{
+        color: green;
+    }
 }

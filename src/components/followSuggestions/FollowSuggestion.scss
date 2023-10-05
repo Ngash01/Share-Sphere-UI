@@ -1,0 +1,57 @@
+.followSuggestion{
+   display: flex;
+    
+   .sidebar{
+    margin-left: -1rem;
+    margin-top: -2rem;
+   }
+
+    .wrapper{
+        flex: 3;
+        padding: 20px;
+
+        .allCelebs{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            .celebProfile{
+                display: flex;
+                gap: 2.3rem;
+                align-items: center;
+                position: relative;
+            
+
+            .celebName{
+                display: flex;
+                align-items: center;
+                gap: 5px;
+
+                .avatar{
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                }
+            }
+            .followCeleb{
+                display: flex;
+                align-items: center;
+                background-color: aliceblue;
+                gap: 8px;
+                border: 2px solid gray;
+                padding: 0 14px;
+                border-radius: 1.4rem;
+                cursor: pointer;
+                position: absolute;
+                right: 4rem;
+            }
+
+        }
+        }
+    }
+
+    .rightBar{
+        flex: 2;
+    }
+}
+

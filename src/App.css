@@ -1,5 +1,11 @@
-.App {
+/* .app {
   text-align: center;
+} */
+
+@media screen and (max-width: 1195) {
+  body{
+    display: none;
+  }
 }
 
 .App-logo {
@@ -12,6 +18,8 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
+
 
 .App-header {
   background-color: #282c34;

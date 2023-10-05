@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import "./rightBar.scss"
+import axios from 'axios'
 
 const RightBar = () => {
   return (
@@ -24,12 +25,11 @@ const RightBar = () => {
                 <span className="sidebarListItemText">Angela Chikuza</span>
                 <span className="onlineIcon"></span>
             </li>
-            <li className='SideBarListItem'> 
+            <li className='SideBarListItem'>
                 <img src="/assets/postpic3.jpeg" className='avatarsidebar' alt="" />
                 <span className="sidebarListItemText">Juma Barassa</span>
                 <span className="onlineIcon"></span>
             </li>
-          
            </ul>
            </div>
            </div>

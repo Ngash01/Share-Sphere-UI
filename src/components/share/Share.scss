@@ -8,6 +8,8 @@
 
     .wrapper{
         padding: 20px;
+        display: flex;
+        flex-direction: column;
 
         .top{
             display: flex;
@@ -38,10 +40,21 @@
             align-items: center;
             justify-content: space-between;
 
+            .shareBtn{
+                &:disabled{
+                    cursor: not-allowed;
+                    background-color: rgb(63, 61, 61);;
+                }
+            }
+
             .shareOptions{
                 display: flex;
                 gap: 1.6rem;
                 align-items: center;
+
+                @media screen and (max-width:500px) {
+                    gap: 0.3rem;
+                }
 
                 .shareOption{
                     display: flex;
@@ -52,6 +65,18 @@
                     width: 6rem;
                     // background-color: gray;
                     border-radius: 16px;
+
+                    &:nth-child(2){
+                        @media screen and (max-width:632px) {
+                            display: none;
+                        }
+                    }
+
+                    &:nth-child(3){
+                        @media screen and (max-width:422px) {
+                            display: none;
+                        }
+                    }
 
                     .ShareIcons{
                         font-size: 1.4rem;

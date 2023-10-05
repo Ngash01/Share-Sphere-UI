@@ -4,14 +4,33 @@
     -webkit-box-shadow: -1px 1px 16px -3px rgba(0,0,0,0.71);
     -moz-box-shadow: -1px 1px 16px -3px rgba(0,0,0,0.71);
     border-radius: 10px;
+    // @media screen and (max-width: 430px) {
+    //     width: 27.1rem;
+    // }
 
     .wrapper{
         padding: 20px;
         width: 100%;
+
+        
         .top{
             display: flex;
             justify-content: space-between;
+            @media screen and (max-width: 370px) {
+                width: 18.3rem;
+            }
+            @media screen and (max-width: 430px) {
+                width: 23.1rem;
+            }
 
+            @media screen and (max-width: 390px) {
+                width: 21.1rem;
+            }
+            @media screen and (max-width: 375px) {
+                width: 20.3rem;
+            }
+  
+            
 
             .TopLeft{
                 display: flex;
@@ -43,17 +62,72 @@
 
         .center{
 
+            @media screen and (max-width: 400px) {
+                width: 12.1rem;
+            }
+            @media screen and (max-width: 370px) {
+                width: 18.3rem;
+            }
+            @media screen and (max-width: 290px) {
+                width: 16.3rem;
+            }
+            @media screen and (max-width: 390px) {
+                width: 21.1rem;
+            }
+            @media screen and (max-width: 414px) {
+                width: 22.3rem;
+            }
+            @media screen and (max-width: 375px) {
+                width: 19.3rem;
+            }
+
             .postImg{
                 width: 100%;
                 height: 35rem;
                 object-fit: cover;
                 object-position: center top;
+
+                @media screen and (max-width:400px){
+                    width: 8rem;
+                }
+                @media screen and (max-width:470px){
+                    width: 24.8rem;
+                }
+                @media screen and (max-width:370px){
+                    width: 100%;
+                }
+                @media screen and (max-width: 270px) {
+                    width: 6rem;
+                }
+
+                @media screen and (max-width: 390px) {
+                    width: 100%;
+                    height: 28rem;
+                }
+                @media screen and (max-width: 414px) {
+                    width: 100%;
+                    height: 28rem;
+                }
+                @media screen and (max-width: 375px) {
+                    width: 100%;
+                    height: 28rem;
+                }
             }
         }
 
         .bottom{
            display: flex; 
            gap: 2rem;
+
+           @media screen and (max-width: 430px) {
+                font-size: 12px;
+                gap: 1rem;
+           }
+           @media screen and (max-width: 370px) {
+            width: 18.3rem;
+            gap: 0.5rem;
+            font-size: 12px;
+        }
 
         .bottomInfo{
             display: flex;
@@ -63,12 +137,23 @@
 
             :nth-child(2){
                 font-size: 13px;
+
+                    @media screen and (max-width: 370px) {
+                        font-size: 12px;
+                    }
+                }
             }
 
             .bottomIcons{
                 font-size: 1.6rem;
+                
             }
         }
+
+        .bottomInfo:nth-child(3){
+            display: none;
+        }
+
 
         .bottomInfo:nth-child(1):hover{
             color: red;
@@ -84,7 +169,7 @@
     
     }
     }
-}
+
 
 
 

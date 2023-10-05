@@ -2,31 +2,37 @@ import './SideBar.scss'
 import {MdRssFeed} from "react-icons/md"
 import {BsFillChatRightTextFill} from "react-icons/bs";
 import {AiFillPlayCircle, AiOutlineQuestionCircle} from "react-icons/ai";
-import {BsPeopleFill} from "react-icons/bs";
+import {MdGroupAdd} from "react-icons/md";
 import {PiBookmarkSimpleFill} from "react-icons/pi";
 import {MdWork} from "react-icons/md";
 import {BsCalendarEvent} from "react-icons/bs";
 import {FaGraduationCap} from "react-icons/fa"
+import {BsFillPeopleFill} from "react-icons/bs"
+import { Link } from 'react-router-dom';
 
 const SideBar1 = ()=>{
     return (
         <div className='Sidebar'>
             <div className="wrapper">
                 <ul className='SidebarList'>
+                    <Link to={'/follow'} style={{textDecoration: 'none'}}>
+                    <li className='SideBarListItem'>
+                            <BsFillPeopleFill className='standardIcons'/>
+                            <span className="sidebarListItemText">People</span>
+                    </li>
+                    </Link>   
+                    <Link to={'/'} style={{textDecoration: 'none'}}>
                     <li className='SideBarListItem'>
                         <MdRssFeed className='standardIcons'/>
                         <span className="sidebarListItemText">Feed</span>
-                    </li>
-                    <li className='SideBarListItem'>
-                        <BsFillChatRightTextFill className='standardIcons'/>
-                        <span className="sidebarListItemText">chats</span>
-                    </li>
+                    </li>  
+                    </Link>                   
                     <li className='SideBarListItem'>
                         <AiFillPlayCircle className='standardIcons'/>
                         <span className="sidebarListItemText">Videos</span>
                     </li>
                     <li className='SideBarListItem'>
-                        <BsPeopleFill className='standardIcons'/>
+                        <MdGroupAdd className='standardIcons'/>
                         <span className="sidebarListItemText">Groups</span>
                     </li>
                     <li className='SideBarListItem'>
