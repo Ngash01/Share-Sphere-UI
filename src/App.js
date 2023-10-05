@@ -21,7 +21,7 @@ function App() {
           <Route path='/' element={user ? <Home/> : <Register/>}/>
           <Route path='/profile/:username' element={!user ? <Navigate to={"/register"}/> : <Profile/>}/>
           <Route path='/login' element={user ? <Navigate to={'/'}/> :  <Login/>}/>
-          <Route path='/register' element={!user ? <Register/> : <FollowSuggestion/> }/>
+          <Route path='/register' element={user ? <FollowSuggestion/> : <Register/>  }/>
           <Route path='/follow' element={user ? <FollowSuggestion/> : <Register/>}/>
         </Routes>
       </Router>
