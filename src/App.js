@@ -22,7 +22,7 @@ function App() {
           <Route path='/profile/:username' element={!user ? <Navigate to={"/register"}/> : <Profile/>}/>
           <Route path='/login' element={user ? <Navigate to={'/follow'}/> :  <Login/>}/>
           <Route path='/follow' element={user ? <FollowSuggestion/> : <Register/>}/>
-          <Route path='/register' element={user ? <FollowSuggestion/> : <Register/>  }/>
+          <Route path='/register' element={user ? <Navigate to={'https://sharesphere.netlify.app/follow'}/> : <Register/>  }/>
         </Routes>
       </Router>
 
